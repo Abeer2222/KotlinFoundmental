@@ -1,0 +1,13 @@
+fun main() {
+    val Movies = arrayOf("","","","","")
+    var n=1
+    for(i in 0..4){
+        print("Movie $n: ")
+        Movies[i]= readLine().toString()
+        n++
+    }
+    println("The movies are: ")
+    for(i in Movies){
+        println(i)
+    }
+}
