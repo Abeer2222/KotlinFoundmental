@@ -1,10 +1,10 @@
 
 fun main() {
     fun IntNumber(num: String): Int{
-        try {
+         return  try {
             return num.toInt()
         }catch (e: Exception){
-            return 0
+            0
         }
     }
 
