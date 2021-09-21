@@ -1,9 +1,7 @@
 import kotlin.random.Random
 
 fun main() {
-    val catsList = listOf("Lili", "Meep", "Patchy", "Furball", "Snowball")
-    val dogsList = listOf("Mike", "Spark", "Lai", "Kuma", "Kai")
-    val ages = listOf(4, 9, 3, 5, 2, 6, 10, 1)
+    val ages = listOf(4, 9, 3, 5, 2, 6, 10, 1,7)
 
     abstract class Animal(val name: String) {
         val Animalname = name
@@ -17,7 +15,7 @@ fun main() {
         }
     }
 
-    class Cat(name: String): Animal(name){
+    class Cat(name: String) : Animal(name) {
         override fun talk() {
             println("$Animalname : Meow - Age is : $AnimalAge")
         }
@@ -26,18 +24,20 @@ fun main() {
     val dogList = arrayListOf<Dog>()
     val catList = arrayListOf<Cat>()
 
-    for (i in dogsList.indices){
+    val dogsList = listOf("Mike", "Spark", "Lai", "Kuma", "Kai")
+    for (i in dogsList.indices) {
         dogList.add(Dog(dogsList[i]))
 
     }
-    for (i in catsList.indices){
+    val catsList = listOf("Lili", "Meep", "Patchy", "Furball", "Snowball")
+    for (i in catsList.indices) {
         catList.add(Cat(catsList[i]))
 
     }
-    for(cat in catList){
+    for (cat in catList) {
         cat.talk()
-        for(dog in dogList){
-            if (dog.AnimalAge > cat.AnimalAge){
+        for (dog in dogList) {
+            if (dog.AnimalAge > cat.AnimalAge) {
                 dog.talk()
             }
         }
