@@ -11,7 +11,7 @@ fun main() {
         countries[country] = capital
     }
 
-    for (i in countries) {
+    for (c in countries) {
         println("${i.key}'s capital is ${i.value}.")
     }
 
